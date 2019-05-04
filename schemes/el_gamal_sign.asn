@@ -1,0 +1,34 @@
+Foo DEFINITIONS ::= BEGIN
+
+	ElGamalSignFile ::= SEQUENCE 
+	{
+		keyset SET
+		{
+			key SEQUENCE
+			{
+				algid	OCTET STRING,
+				test	UTF8String,
+				keydata SEQUENCE
+				{
+					b INTEGER
+				},
+				param SEQUENCE
+				{
+					prime INTEGER,
+					r INTEGER,
+					generator INTEGER
+				},
+				ciphertext SEQUENCE
+				{
+					w INTEGER,
+					s INTEGER
+				}
+			}
+		},
+		last SEQUENCE{}
+	}
+
+END
+
+
+
